@@ -1,5 +1,5 @@
-import bot from './assets/bot.svg'
-import user from './assets/user.svg'
+import bot from './assets/bot.svg';
+import user from './assets/user.svg';
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
   chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
 
   // to focus scroll to the bottom 
-  chatContainer.scrollTop = chatContainer.scrollHeight;
+  chatContainer.scrollTop = chatContainer.scrollHeight
 
   // specific message div 
   const messageDiv = document.getElementById(uniqueId)
@@ -90,16 +90,9 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 }
 
-form.addEventListener('submit', handleSubmit);
+form.addEventListener('submit', handleSubmit)
 form.addEventListener('keyup', (e) => {
   if (e.keyCode === 13) {
     handleSubmit(e);
   }
-})
-
-form.addEventListener('submit', handleSubmit)
-form.addEventListener('keyup', (e) => {
-    if (e.keyCode === 13) {
-        handleSubmit(e)
-    }
 })
